@@ -27,8 +27,9 @@ module.exports = {
   },
   nodered: function() {
     var returnObj = {
-        mongoAppname: process.env.FLOW_COLLECTION,
-        mongoUrl: process.env.DATABASE_URL,
+        mongoAppname: process.env.MONGO_APPNAME,
+        mongoCollection: process.env.MONGO_COLLECTION,
+        mongoUrl: process.env.MONGO_DATABASE_URL,
         // the tcp port that the Node-RED web server is listening on
         uiPort: 1880,
         // Retry time in milliseconds for MQTT connections
@@ -40,11 +41,11 @@ module.exports = {
 
         // By default, all user data is stored in the Node-RED install directory. To
         // use a different location, the following property can be used
-        userDir: path.join("/usr/src/flows"),
+        userDir: "/usr/src/flows",
 
         // Node-RED scans the `nodes` directory in the install directory to find nodes.
         // The following property can be used to specify an additional directory to scan.
-        nodesDir: "/usr/src",
+        // nodesDir: "/usr/src/nodes",
 
         // By default, the Node-RED UI is available at http://localhost:1880/
         // The following property can be used to specifiy a different root path.
@@ -179,7 +180,7 @@ module.exports = {
           }
         }
       }
-    if (process.env.MONGO_STORE) {
+    if (process.env.STORAGE == "mongo") {
         returnObj.storageModule = require("./mongostorage");
     }
     else {
