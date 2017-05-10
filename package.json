@@ -1,7 +1,7 @@
 {
-  "name": "Management",
+  "name": "Your_App",
   "version": "1.0.0",
-  "description": "The management interface for the propl site",
+  "description": "A Node-RED base application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
