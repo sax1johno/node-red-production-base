@@ -1,0 +1,13 @@
+export PORT=80
+export APP_NAME=myapp
+export APP_VERSION=0.0.1
+export FLOW_COLLECTION=$APP_NAME
+export HTTP_ADMIN_ROOT=/system/admin
+export HTTP_NODE_ROOT=/
+export ADMIN_USERNAME=admin
+export ADMIN_PASSWORD=changeme
+export LOG_LEVEL=debug
+export LOG_METRICS=false
+export LOG_AUDIT=false
+export FLOW_NAME=$APP_NAME
+export DATABASE_URL=mongodb://db/

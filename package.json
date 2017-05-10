@@ -1,0 +1,45 @@
+{
+  "name": "Management",
+  "version": "1.0.0",
+  "description": "The management interface for the propl site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "4.4.0",
+    "npm": "2.14.20"
+  },
+  "author": "John O&#39;Connor (sax1johno@gmail.com)",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "express": "4.13.4",
+    "mongodb": "^2.2.26",
+    "node-red": "^0.15.3",
+    "node-red-contrib-auth": "^0.1.5",
+    "node-red-contrib-http-multipart": "^0.1.4",
+    "node-red-contrib-mongodb2": "^0.5.5",
+    "node-red-dashboard": "^2.0.2",
+    "node-red-node-aws": "^0.1.0",
+    "node-red-node-email": "0.1.*",
+    "node-red-node-feedparser": "0.1.*",
+    "node-red-node-mongodb": "0.0.5",
+    "node-red-node-rbe": "0.1.*",
+    "node-red-node-swagger": "^0.1.5",
+    "node-red-node-twitter": "0.1.*",
+    "sentiment": "1.0.6",
+    "underscore": "^1.8.3",
+    "when": "3.7.7",
+    "ws": "0.8.1"
+  },
+  "optionalDependencies": {
+    "node-red-node-serialport": "0.2.*"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "node-red-admin": "^0.1.2"
+  }
+}
