@@ -12,8 +12,8 @@ Configuration can be done in 2 ways - you can either mount the "workspace" volum
 
 Below is a list of the environment variables you can use to configure the base instance:
 
-| Variable  | Default           | Possible Options  | Short Description
-| ------------- |:-------------:| -----:|
+| Variable  | Default           | Possible Options  | Short Description |
+| ------------- |:-------------:| -----:| ------:|
 | APP_NAME      | myapp | Any string | Gives your application a name in the system.  Used to generate default flow file names and other funn stuff.
 | APP_VERSION      | 0.0.1      |   <major>.<minor>.<patch> | Allows you to specify a version number for your application.  Useful when debugging.
 | HTTP_ADMIN_ROOT | /system/admin      |    Any valid absolute path name | Specify which path the flow editor will be served from
