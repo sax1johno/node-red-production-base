@@ -24,6 +24,7 @@ Below is a list of the environment variables you can use to configure the base i
 | LOG_METRICS | false      |   [true\|false] | If true, logs out metrics data as well as the given log level data
 | LOG_AUDIT | false     |    [true\|false] | if true, logs out audit trail data as well as the given log info.
 | FLOW_NAME | $APP_NAME     |    Any valid string  | Provides the name for the flow file if using flat-file / JSON storage to store your flows
+| STORAGE | [mongo] | Currently only mongo or nothing | If empty, this will store flows in the /usr/src/flows volume.  If "mongo" and at LEAST the MONGO_DATABASE_URL is set, will store flows in a mongo database.
 | MONGO_APPNAME | $APP_NAME     |    Any valid string | Gives a name to this application in MongoDB. Allows you to store multiple node-red flows within the same MongoDB collection.
 | MONGO_COLLECTION | ${APP_NAME}_flows     |    Any valid MongoDB collection name | Specifies which MongoDB collection to store the flows in for this application.  Defaults to the name of your application with _flows afterward, so by default all applications store their flows in a different collection. 
 | MONGO_DATABASE_URL | mongodb://db/ |    Any valid MongoDB connection string | Specifies a connection string for connecting to MongoDB.  By default, assumes there is a linked container with a service called "db" running MongoDB.  This can be changed to any valid MongoDB database connection string, and can be used with ?ssl and ?replset options.
