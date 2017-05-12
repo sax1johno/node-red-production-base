@@ -17,7 +17,7 @@
     "bcrypt": "^1.0.2",
     "express": "4.13.4",
     "mongodb": "^2.2.26",
-    "node-red": "^0.15.3",
+    "node-red": "^0.16.2",
     "node-red-contrib-auth": "^0.1.5",
     "node-red-contrib-http-multipart": "^0.1.4",
     "node-red-contrib-mongodb2": "^0.5.5",
