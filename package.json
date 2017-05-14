@@ -16,6 +16,7 @@
   "dependencies": {
     "bcrypt": "^1.0.2",
     "express": "4.13.4",
+    "moment": "^2.18.1",
     "mongodb": "^2.2.26",
     "node-red": "^0.16.2",
     "node-red-contrib-auth": "^0.1.5",

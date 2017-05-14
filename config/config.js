@@ -133,7 +133,8 @@ module.exports = {
         // eg:
         functionGlobalContext: {
             os:require('os'),
-            _: require('underscore')
+            _: require('underscore'),
+            moment: require('moment')
         },
         // can be accessed in a function block as:
         //    context.global.os

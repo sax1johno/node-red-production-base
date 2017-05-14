@@ -6,9 +6,19 @@ var http = require('http');
 var express = require("express");
 var RED = require("node-red"),
     app = express(),
-    environment = app.settings.env;
+    environment = app.settings.env,
+    _ = require('underscore');
 
-var config = require("./config/config.js");
+var config = require("/usr/src/config/config.js");
+try {
+	var userConfig = require("/usr/src/workspace/config.js");
+	config = _.extend(config, userConfig);
+	console.info("Used User config file");
+} catch (e) {
+	console.info(e);
+	// Do nothing - the user never supplied a "userConfig".
+	console.info("User did not supply a configuration file");
+}
 app.use("/",express.static("/usr/src/workspace/public"));
 
 // Create a server

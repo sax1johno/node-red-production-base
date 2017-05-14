@@ -9,12 +9,11 @@ RUN mkdir -p /usr/src && cp -a /tmp/node_modules /usr/src/
 RUN mkdir -p /usr/src/config && mkdir -p /usr/src/public && mkdir -p /usr/src/flows
 
 COPY package.json /usr/src
-COPY config /usr/src/config
 COPY app.js /usr/src
 COPY public /usr/src/workspace
+COPY config /usr/src/config
 COPY flows /usr/src/flows
 
-VOLUME /usr/src/config
 VOLUME /usr/src/flows
 VOLUME /usr/src/workspace
 
