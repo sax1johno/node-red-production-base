@@ -166,9 +166,9 @@ module.exports = {
                 level: process.env.LOG_LEVEL,
 
                 // Whether or not to include metric events in the log output
-                metrics: process.env.LOG_METRICS,
+                // metrics: process.env.LOG_METRICS,
                 // Whether or not to include audit events in the log output
-                audit: process.env.LOG_AUDIT
+                // audit: process.env.LOG_AUDIT
             }
         },
         swagger: {
@@ -188,6 +188,13 @@ module.exports = {
         // The file containing the flows. If not set, it defaults to flows_<hostname>.json
         returnObj.flowFile = process.env.FLOW_NAME;
         returnObj.flowFilePretty= false;
+    }
+
+    if (process.env.LOG_AUDIT) {
+        returnObj.logging.console.audit = true;
+    }
+    if (process.env.LOG_METRICS) {
+        returnObj.logging.console.metrics = true;
     }
     return returnObj;
   }
